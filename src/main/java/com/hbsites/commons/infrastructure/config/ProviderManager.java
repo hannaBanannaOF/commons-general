@@ -2,7 +2,7 @@ package com.hbsites.commons.infrastructure.config;
 
 import io.smallrye.mutiny.Uni;
 
-public interface UserProviderManager {
+public interface ProviderManager {
 
-    public Uni<Void> populateUserProvider();
+    Uni<Void> populate();
 }

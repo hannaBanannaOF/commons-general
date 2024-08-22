@@ -13,7 +13,7 @@ dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
-    implementation 'io.quarkus:quarkus-hibernate-orm'
+    implementation 'io.quarkus:quarkus-jdbc-h2'
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
@@ -23,10 +23,14 @@ dependencies {
 
     testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    annotationProcessor("org.seasar.doma:doma-processor:2.60.0")
+    implementation("org.seasar.doma:doma-core:2.60.0")
+    implementation("io.quarkiverse.doma:quarkus-doma:0.0.9")
 }
 
 group 'com.hbsites.commons'
-version '1.0.16-SNAPSHOT'
+version '1.0.24-SNAPSHOT'
 
 tasks.withType(GenerateModuleMetadata).configureEach {
     // The value 'enforced-platform' is provided in the validation
