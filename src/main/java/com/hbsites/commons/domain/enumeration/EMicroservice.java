@@ -4,13 +4,14 @@ import lombok.Getter;
 
 @Getter
 public enum EMicroservice {
-    RPGTRACKER_CORE("core.user.response"),
-    RPGTRACKER_COC("coc.user.response"),
+    RPGTRACKER_CORE("rpgtracker-core"),
+    RPGTRACKER_COC("rpgtracker-coc"),
+    RPGTRACKER_GB("rpgtracker-gb"),
     USER("");
 
-    private final String userResponseRoutingKey;
+    private final String updatePathsRoutingKey;
 
-    private EMicroservice(String userResponseRoutingKey) {
-        this.userResponseRoutingKey = userResponseRoutingKey;
+    private EMicroservice(String updatePathsRoutingKey) {
+        this.updatePathsRoutingKey = updatePathsRoutingKey;
     }
 }
