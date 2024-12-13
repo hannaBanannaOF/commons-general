@@ -1,6 +1,6 @@
 package com.hbsites.commons.domain.interfaces;
 
-import com.hbsites.commons.domain.dto.BasicListDTO;
+import com.hbsites.commons.domain.model.BasicListItem;
 import com.hbsites.commons.domain.params.CRUDDeleteParams;
 import com.hbsites.commons.domain.params.CRUDGetAllParams;
 import com.hbsites.commons.domain.params.CRUDGetOneParams;
@@ -19,7 +19,7 @@ import java.util.List;
 public interface CRUDResource<DTO> {
 
     @GET
-    Uni<List<BasicListDTO>> getAll(@BeanParam CRUDGetAllParams params);
+    Uni<List<BasicListItem>> getAll(@BeanParam CRUDGetAllParams params);
 
     @POST
     Uni<DTO> create(@BeanParam DefaultParams params, DTO create);

@@ -8,9 +8,4 @@ import lombok.Setter;
 import java.util.UUID;
 
 @RegisterForReflection
-@Getter
-@Setter
-public abstract class BaseMessage {
-    private EMicroservice microservice;
-    private UUID userRequested;
-}
+public record BaseMessage(EMicroservice microservice, UUID userRequested) {}
