@@ -13,7 +13,7 @@ import org.jboss.resteasy.reactive.RestQuery;
 @AllArgsConstructor
 @NoArgsConstructor
 @RegisterForReflection
-public class CRUDGetAllParams extends DefaultParams {
+public class GetAllParams extends DefaultParams {
     @RestQuery
     @DefaultValue("0")
     private int page = 0;
